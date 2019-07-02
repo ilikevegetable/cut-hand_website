@@ -16,16 +16,16 @@ public class ReferalLinkController {
 	@Autowired
 	ReferalLinkService referalLinkService;
 
-	@RequestMapping("/listLink")
-	public String list(Model model) {
-		List<ReferalLink> links = referalLinkService.listAll();
-		model.addAttribute("links", links);
-		return "admin/listLink";
-	}
+//	@RequestMapping("/listLink")
+//	public String list(Model model) {
+//		List<ReferalLink> links = referalLinkService.listAll();
+//		model.addAttribute("links", links);
+//		return "admin/listLink";
+//	}
 
-	@RequestMapping("/updateLink")
-	public String update(ReferalLink link) {
-		referalLinkService.update(link);
-		return "redirect:listLink";
-	}
+//	@RequestMapping("/updateLink")
+//	public String update(ReferalLink link) {
+//		referalLinkService.update(link);
+//		return "redirect:listLink";
+//	}
 }
