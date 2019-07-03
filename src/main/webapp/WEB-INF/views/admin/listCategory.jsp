@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>E-Store</title>
+    <title>CUT-HAND</title>
     <!-- Bootstrap Styles-->
     <link href="../assets/css/bootstrap.css" rel="stylesheet" />
     <!-- FontAwesome Styles-->
@@ -47,9 +47,6 @@
                 <li>
                     <a href="listOrder"><i class="fa fa-list-alt"></i> 订单管理</a>
                 </li>
-<%--                <li>--%>
-<%--                    <a href="listLink"><i class="fa fa-link"></i> 推荐链接管理</a>--%>
-<%--                </li>--%>
             </ul>
         </div>
 

@@ -4,38 +4,6 @@
 
 <%@include file="include/header.jsp" %>
 
-<%--<style>--%>
-<%--    .header {--%>
-<%--        padding: 22px 0px;--%>
-<%--        height: 88px;--%>
-<%--        width: 1190px;--%>
-<%--        margin: auto;--%>
-<%--    }--%>
-
-<%--    a {--%>
-<%--        text-decoration: none;--%>
-<%--    }--%>
-
-<%--    .header .tm-logo {--%>
-<%--        margin-top: 8px;--%>
-<%--        width: 190px;--%>
-<%--    }--%>
-
-<%--    #mallPage, #mallPage.mallChn {--%>
-<%--        width: auto;--%>
-<%--        min-width: 990px;--%>
-<%--        background-color: transparent;--%>
-<%--    }--%>
-<%--</style>--%>
-<%--<div class="mallPage" id="mallPage">--%>
-<%--    <div class="header">--%>
-<%--        <a href="/home">--%>
-<%--            <img src="/img/fore/logo4.png" class="tm-logo">--%>
-<%--        </a>--%>
-<%--    </div>--%>
-<%--</div>--%>
-
-
 <style>
     .content {
         position: relative;

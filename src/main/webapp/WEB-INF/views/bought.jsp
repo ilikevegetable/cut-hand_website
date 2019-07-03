@@ -300,13 +300,6 @@
                         <span>订单号: ${o.order_code}
                     </span>
                     </td>
-<%--                    <td colspan="2"><img width="13px" src="img/fore/orderItemTmall.png">天猫商场</td>--%>
-<%--                    <td colspan="1">--%>
-<%--                        <a class="wangwanglink" href="#nowhere">--%>
-<%--                            <div class="orderItemWangWangGif"></div>--%>
-<%--                        </a>--%>
-
-<%--                    </td>--%>
                     <td class="orderItemDeleteTD">
                         <a class="deleteOrderLink" oid="${o.id}" href="#nowhere">
                             <span class="orderListItemDelete glyphicon glyphicon-trash"></span>
@@ -320,7 +313,8 @@
                         </td>
                         <td class="orderItemProductInfoPartTD">
                             <div class="orderListItemProductLinkOutDiv">
-                                <a href="foreproduct?pid=${oi.product.id}">${oi.product.name}</a>
+                                <a href="/showProduct?product_id=${oi.product.id}">${oi.product.name}</a>
+
                                 <div class="orderListItemProductLinkInnerDiv">
                                 </div>
                             </div>

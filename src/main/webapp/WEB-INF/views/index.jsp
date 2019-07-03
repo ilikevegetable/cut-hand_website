@@ -164,29 +164,6 @@
                     </c:forEach>
                 </ul>
                 <%@include file="include/hot-word-con.jsp" %>
-
-                <%--<c:forEach items="${categories}" var="c">--%>
-                <%--<div class="hot-word-con" category_id="${c.id}">--%>
-                <%--<c:forEach items="${c.productByRow}" var="ps">--%>
-                <%--<div class="hot-word-line">--%>
-                <%--<c:forEach items="${ps}" var="p">--%>
-                <%--<div class="line-title">--%>
-                <%--<c:if test="${!empty p.name}">--%>
-                <%--<a href="showProduct?product_id=${p.id}">--%>
-                <%--<c:forEach items="${fn:split(p.name, ' ')}" var="title" varStatus="st">--%>
-                <%--<c:if test="${st.index==0}">--%>
-                <%--${title}--%>
-                <%--</c:if>--%>
-                <%--</c:forEach>--%>
-                <%--</a>--%>
-                <%--</c:if>--%>
-                <%--</div>--%>
-                <%--</c:forEach>--%>
-                <%--<div class="seprate"></div>--%>
-                <%--</div>--%>
-                <%--</c:forEach>--%>
-                <%--</div>--%>
-                <%--</c:forEach>--%>
             </div>
 
             <script type="text/javascript">

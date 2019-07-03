@@ -300,25 +300,6 @@
 
 </script>
 
-
-<%--<div class="page">--%>
-<%--<div id="hd" class="tb-shop">--%>
-<%--<a href="#nowhere"><img style="height: 200px;" src="img/fore/hd.jpg" /></a>--%>
-<%--</div>--%>
-<%--<nav class="tb-shop-nav">--%>
-<%--<a href="#nowhere"><span>全部商品分类</span></a><span> | </span>--%>
-<%--<a href="#nowhere"><span>首页</span></a><span> | </span>--%>
-<%--<a href="#nowhere"><span>荣耀</span></a><span> | </span>--%>
-<%--<a href="#nowhere"><span>小米</span></a><span> | </span>--%>
-<%--<a href="#nowhere"><span>华为</span></a><span> | </span>--%>
-<%--<a href="#nowhere"><span>苹果</span></a><span> | </span>--%>
-<%--<a href="#nowhere"><span>魅族</span></a><span> | </span>--%>
-<%--<a href="#nowhere"><span>电信卡</span></a><span> | </span>--%>
-<%--<a href="#nowhere"> <span>碎屏保</span></a>--%>
-<%--</nav>--%>
-<%--</div>--%>
-
-
 <div class="product">
     <div class="imgAndInfo">
         <div class="imgInimgAndInfo">

@@ -1,38 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8" isELIgnored="false" %>
-
-
-<%--&lt;%&ndash; 顶部导航栏 &ndash;%&gt;--%>
-<%--<nav id="site-nav" role="navigation">--%>
-<%--    <div class="workArea">--%>
-
-<%--        &lt;%&ndash; 导航栏左半部分--%>
-<%--         如果取不到用户信息则显示如下： &ndash;%&gt;--%>
-<%--        <c:if test="${empty sessionScope.user}">--%>
-<%--            <span>欢迎来E-Store!!</span>--%>
-<%--            <span><a href="/loginPage">请登录</a></span>--%>
-<%--&lt;%&ndash;            <span><a href="/registerPage">免费注册</a></span>&ndash;%&gt;--%>
-<%--        </c:if>--%>
-<%--        &lt;%&ndash; 如果用户成功登录，则显示如下： &ndash;%&gt;--%>
-<%--        <c:if test="${!empty sessionScope.user}">--%>
-<%--            <span>Hi，${sessionScope.user.name}</span>--%>
-<%--            <span><a href="usermessage">积分 <strong>12581</strong></a></span>--%>
-<%--            <span><a href="/logout">退出</a></span>--%>
-<%--        </c:if>--%>
-
-
-<%--        &lt;%&ndash; 导航栏右半部分：--%>
-<%--             使用Bootstrap的pull-right类 &ndash;%&gt;--%>
-<%--        <span class="pull-right">--%>
-<%--            <a> 个人中心 </a>--%>
-<%--            <a href="bought">我的订单</a>--%>
-<%--            <a href="cart">--%>
-<%--                <span class="glyphicon glyphicon-shopping-cart redColor"></span>--%>
-<%--                购物车<strong id="cartTotalItemNumber">${cartTotalItemNumber}</strong>件--%>
-<%--            </a>--%>
-<%--        </span>--%>
-
-<%--</nav>--%>
 <style>
     * {
         padding: 0;
@@ -108,23 +75,6 @@
         padding: 0 6px;
     }
 
-    /*.wrapper .top-nav-wrap .top-nav .bg-pic.personal-pic {*/
-    /*    background-image: url('personal.png');*/
-    /*    width: 15px;*/
-    /*    height: 15px;*/
-    /*}*/
-
-    /*.wrapper .top-nav-wrap .top-nav .bg-pic.shoppingcart-pic {*/
-    /*    background-image: url('shoppingcart.png');*/
-    /*    width: 15px;*/
-    /*    height: 15px;*/
-    /*}*/
-
-    /*.wrapper .top-nav-wrap .top-nav .bg-pic.order-pic {*/
-    /*    background-image: url('order.png');*/
-    /*    width: 15px;*/
-    /*    height: 15px;*/
-    /*}*/
 </style>
 
 <div class="wrapper">
