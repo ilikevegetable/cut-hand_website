@@ -290,7 +290,7 @@
                         );
                     }
                     else {
-                        $("#loginModal").modal('show');
+                        window.location="/loginPage";
                     }
                 }
             );

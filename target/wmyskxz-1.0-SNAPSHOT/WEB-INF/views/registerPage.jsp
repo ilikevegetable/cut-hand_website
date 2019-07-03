@@ -4,7 +4,7 @@
 
 <style>
     body{
-        background-image: url("/img/fore/loginbg.jpg");
+        background-image: url("/img/fore/registerbg.png");
         background-repeat:round;
     }
     .page {

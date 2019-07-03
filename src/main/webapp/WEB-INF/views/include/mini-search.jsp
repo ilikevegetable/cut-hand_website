@@ -278,7 +278,7 @@
 
                     <div class="search-panel">
 
-                        <form action="">
+                        <form action="searchProduct">
                             <div class="btn">
                                 <button class="btn">搜索</button>
                             </div>

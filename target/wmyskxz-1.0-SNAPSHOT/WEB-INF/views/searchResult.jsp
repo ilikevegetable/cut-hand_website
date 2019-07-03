@@ -287,7 +287,7 @@
             }
 
             .productStatus .ww-light a {
-                background: url(/img/fore/ww-online.png) center center no-repeat !important;
+                background: url(/img/fore/logo5.png) center center no-repeat !important;
                 background-size: 16px !important;
                 position: relative;
                 width: 16px;

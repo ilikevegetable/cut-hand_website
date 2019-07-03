@@ -248,36 +248,36 @@
 </style>
 
 <script>
-    $(function () {
-        $("a.productDetailTopReviewLink").click(function () {
-            $("div.productReviewDiv").show();
-            $("div.productDetailDiv").hide();
-        });
-        $("a.productReviewTopPartSelectedLink").click(function () {
-            $("div.productReviewDiv").hide();
-            $("div.productDetailDiv").show();
-        });
-
-        $("span.leaveMessageTextareaSpan").hide();
-        $("img.leaveMessageImg").click(function () {
-
-            $(this).hide();
-            $("span.leaveMessageTextareaSpan").show();
-            $("div.orderItemSumDiv").css("height", "100px");
-        });
-
-        $("div#footer a[href$=#nowhere]").click(function () {
-            alert("模仿天猫的连接，并没有跳转到实际的页面");
-        });
-
-
-        $("a.wangwanglink").click(function () {
-            alert("模仿旺旺的图标，并不会打开旺旺");
-        });
-        $("a.notImplementLink").click(function () {
-            alert("这个功能没做，蛤蛤~");
-        });
-    });
+    // $(function () {
+    //     $("a.productDetailTopReviewLink").click(function () {
+    //         $("div.productReviewDiv").show();
+    //         $("div.productDetailDiv").hide();
+    //     });
+    //     $("a.productReviewTopPartSelectedLink").click(function () {
+    //         $("div.productReviewDiv").hide();
+    //         $("div.productDetailDiv").show();
+    //     });
+    //
+    //     $("span.leaveMessageTextareaSpan").hide();
+    //     $("img.leaveMessageImg").click(function () {
+    //
+    //         $(this).hide();
+    //         $("span.leaveMessageTextareaSpan").show();
+    //         $("div.orderItemSumDiv").css("height", "100px");
+    //     });
+    //
+    //     $("div#footer a[href$=#nowhere]").click(function () {
+    //         alert("模仿天猫的连接，并没有跳转到实际的页面");
+    //     });
+    //
+    //
+    //     $("a.wangwanglink").click(function () {
+    //         alert("模仿旺旺的图标，并不会打开旺旺");
+    //     });
+    //     $("a.notImplementLink").click(function () {
+    //         alert("这个功能没做，蛤蛤~");
+    //     });
+    // });
 
 </script>
 <div class="buyPageDiv">
@@ -346,14 +346,9 @@
                         <td class="orderItemFirstTD"><img class="orderItemImg" src="img/product/${oi.product_id}/1.jpg">
                         </td>
                         <td class="orderItemProductInfo">
-                            <a href="foreproduct?pid=${oi.product_id}" class="orderItemProductLink">
+                            <a href="/showProduct?product_id=${oi.product_id}" class="orderItemProductLink">
                                     ${oi.product.name}
                             </a>
-
-<%--                            <img src="img/fore/creditcard.png" title="支持信用卡支付">--%>
-<%--                            <img src="img/fore/7day.png" title="消费者保障服务,承诺7天退货">--%>
-<%--                            <img src="img/fore/promise.png" title="消费者保障服务,承诺如实描述">--%>
-
                         </td>
                         <td>
 

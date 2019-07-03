@@ -427,9 +427,6 @@
                             <a href="/showProduct?product_id=${oi.product.id}"
                                class="cartProductLink">${oi.product.name}</a>
                             <div class="cartProductLinkInnerDiv">
-<%--                                <img src="img/fore/creditcard.png" title="支持信用卡支付">--%>
-<%--                                <img src="img/fore/7day.png" title="消费者保障服务,承诺7天退货">--%>
-<%--                                <img src="img/fore/promise.png" title="消费者保障服务,承诺如实描述">--%>
                             </div>
                         </div>
 

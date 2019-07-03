@@ -218,11 +218,11 @@
         <table class="confirmPayOrderDetailTable">
             <tr>
                 <td>订单编号：</td>
-                <td>${order.order_code} <img width="23px" src="img/fore/confirmOrderTmall.png"></td>
+                <td>${order.order_code} </td>
             </tr>
             <tr>
                 <td>卖家昵称：</td>
-                <td>Cut-Hand: <span class="confirmPayOrderDetailWangWangGif"></span></td>
+                <td>Cut-Hand: </td>
             </tr>
             <tr>
                 <td>收货信息：</td>

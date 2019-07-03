@@ -60,7 +60,7 @@
         height: 40px;
         background-color: #f1f1f1;
         border-bottom-style:inset;
-        border-color: #00eeff;
+        border-color: rgba(0,0,255,0.05);
         border-width: 2px;
     }
 

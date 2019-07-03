@@ -311,7 +311,6 @@
                 <div class="search-t">
 
                     <div class="search-panel">
-
                         <form action="/searchProduct">
                             <div class="btn">
                                 <button type="submit" class="btn">搜索</button>
@@ -319,7 +318,7 @@
                             <div class="search-inp-box">
                                 <div class="search-inp">
                                     <!-- placeholder为灰色字体 -->
-                                    <input type="text" name="" placeholder="搜索商品">
+                                    <input type="text" name="keyword" placeholder="搜索商品">
                                 </div>
                             </div>
                         </form>

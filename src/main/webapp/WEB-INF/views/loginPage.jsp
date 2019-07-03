@@ -40,7 +40,7 @@
     .content {
         position: relative;
         width: 100%;
-        margin-bottom: 40px;
+        /*margin-bottom: 40px;*/
     }
 
     .login-banner-wrap img {
@@ -156,7 +156,7 @@
 <div class="content">
     <div class="login-banner-wrap" style="width: 100%; background-color: rgb(223, 226, 231);" title="">
         <div class="inner">
-            <img style="max-width: 100% ; height: auto" src="/img/fore/loginbg.jpg">
+            <img style="width: 100% ; height: 100%" src="/img/fore/loginbg.jpg">
         </div>
     </div>
     <div class="form" style="display: block; right: 176.5px;">
