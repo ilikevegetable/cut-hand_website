@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpSession;
+import javax.validation.constraints.Null;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
@@ -81,6 +82,7 @@ public class ForeController {
 		for (Product product : products) {
 			product.setReviewCount(reviewService.getCount(product.getId()));
 		}
+		Collections.sort(products, Comparator.comparing(Product::getSale).thenComparing(Product::getReviewCount).reversed());
 		model.addAttribute("products", products);
 		return "searchResult";
 	}
@@ -94,16 +96,16 @@ public class ForeController {
 		if (null != sort) {
 			switch (sort) {
 				case "all":
-					Collections.sort(products, Comparator.comparing(Product::getSaleXReviewCount));
+					Collections.sort(products, Comparator.comparing(Product::getSale).thenComparing(Product::getReviewCount).reversed());
 					break;
 				case "reviewCount":
-					Collections.sort(products, Comparator.comparing(Product::getReviewCount));
+					Collections.sort(products, Comparator.comparing(Product::getReviewCount).reversed());
 					break;
 				case "date":
 //					Collections.sort(products, comparing(Product::get));
 					break;
 				case "sale":
-					Collections.sort(products, Comparator.comparing(Product::getSale));
+					Collections.sort(products, Comparator.comparing(Product::getSale).reversed());
 					break;
 				case "price":
 					Collections.sort(products, Comparator.comparing(Product::getPrice));
@@ -171,10 +173,11 @@ public class ForeController {
 		boolean found = false;
 		List<OrderItem> orderItems = orderItemService.listByUserId(user.getId());
 		for (OrderItem orderItem : orderItems) {
-			if (orderItem.getProduct_id().intValue() == product.getId().intValue()) {
+			if (orderItem.getProduct_id().intValue() == product.getId().intValue() && orderItem.getOrder_id() == null) {
 				orderItem.setNumber(orderItem.getNumber() + number);
 				orderItemService.update(orderItem);
 				orderItemId = orderItem.getId();
+				found = true;
 				break;
 			}
 		}
@@ -252,8 +255,9 @@ public class ForeController {
 		boolean found = false;
 
 		List<OrderItem> ois = orderItemService.listByUserId(user.getId());
+
 		for (OrderItem oi : ois) {
-			if (oi.getProduct().getId().intValue() == p.getId().intValue()) {
+			if (oi.getProduct().getId().intValue() == p.getId().intValue() && oi.getOrder_id() == null) {
 				oi.setNumber(oi.getNumber() + num);
 				orderItemService.update(oi);
 				found = true;
@@ -307,7 +311,7 @@ public class ForeController {
 
 		List<OrderItem> ois = orderItemService.listByUserId(user.getId());
 		for (OrderItem oi : ois) {
-			if (oi.getProduct().getId().intValue() == product_id) {
+			if (oi.getProduct().getId().intValue() == product_id && oi.getOrder_id() == null) {
 				oi.setNumber(number);
 				orderItemService.update(oi);
 				break;
@@ -317,23 +321,13 @@ public class ForeController {
 	}
 
 	@RequestMapping("deleteOrderItem")
-	@ResponseBody
+	@ResponseBody							//@ResponseBody响应ajax
 	public String deleteOrderItem(Model model, HttpSession session, Integer orderItemId) {
 		User user = (User) session.getAttribute("user");
 		if (null == user)
 			return "fail";
 		orderItemService.delete(orderItemId);
 		return "success";
-	}
-
-	@RequestMapping("bought")
-	public String bought(Model model, HttpSession session) {
-		User user = (User) session.getAttribute("user");
-		List<Order> orders = orderService.list(user.getId(), OrderService.delete);
-		orderItemService.fill(orders);
-		model.addAttribute("orders", orders);
-
-		return "bought";
 	}
 
 	@RequestMapping("confirmPay")
@@ -373,6 +367,16 @@ public class ForeController {
 		model.addAttribute("order", order);
 		model.addAttribute("reviews", reviews);
 		return "reviewPage";
+	}
+
+	@RequestMapping("bought")
+	public String bought(Model model, HttpSession session) {
+		User user = (User) session.getAttribute("user");
+		List<Order> orders = orderService.list(user.getId(), OrderService.delete);
+		orderItemService.fill(orders);
+		model.addAttribute("orders", orders);
+
+		return "bought";
 	}
 
 	@RequestMapping("doreview")

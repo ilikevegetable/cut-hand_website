@@ -325,7 +325,7 @@
                 <div class="productPriceDiv">
                     <div class="gouwujuanDiv">
 <%--                        <img src="img/fore/tmall-coupon.png">--%>
-                        <span> E-Store实物商品通用</span>
+                        <span> cut-hand实物商品通用</span>
                     </div>
 
                     <div class="promotionDiv">

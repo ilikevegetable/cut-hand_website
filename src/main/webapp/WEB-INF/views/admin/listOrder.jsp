@@ -136,13 +136,6 @@
                                                                 <button class="btn btn-primary btn-xs">发货</button>
                                                             </a>
                                                         </c:if>
-                                                    <%--<select name="status" class="form-control">--%>
-                                                        <%--<option>待付款</option>--%>
-                                                        <%--<option>已发货</option>--%>
-                                                        <%--<option>订单完成</option>--%>
-                                                    <%--</select>--%>
-                                                    <%--<input type="submit" class="form-control" value="提交">--%>
-                                                <%--</form>--%>
                                             </td>
                                         </tr>
                                     </c:forEach>
